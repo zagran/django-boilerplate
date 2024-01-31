@@ -49,7 +49,14 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # Third-party apps
+    "rest_framework",
+    "drf_spectacular",
 ]
+
+REST_FRAMEWORK: dict = {
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -185,6 +192,18 @@ SESSION_COOKIE_AGE = 3600
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5050",
 ]
+
+# Documentation Settings
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Django API",
+    "VERSION": os.getenv("RELEASE_TAG", ENVIRONMENT),
+    "SORT_OPERATIONS": True,
+    "SORT_OPERATION_PARAMETERS": False,
+    "SWAGGER_UI_SETTINGS": {
+        "deepLinking": True,
+        "docExpansion": "none",
+    },
+}
 
 
 # Your stuff...
