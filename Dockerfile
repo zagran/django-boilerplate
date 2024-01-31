@@ -30,4 +30,4 @@ ENTRYPOINT ["./docker-entrypoint.sh"]
 RUN python manage.py migrate
 
 # gunicorn
-CMD ["gunicorn", "--config", "gunicorn-cfg.py", "config.wsgi"]
+CMD ["gunicorn", "--config", "gunicorn_config.py", "config.wsgi"]
