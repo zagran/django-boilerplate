@@ -1,0 +1,29 @@
+version: '1.0'
+
+services:
+  django-api:
+    container_name: api
+    restart: always
+    build: .
+    networks:
+      - db_network
+      - web_network
+
+  web-nginx:
+    container_name: web
+    restart: always
+    image: "nginx:latest"
+    ports:
+      - "5050:5050"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+    networks:
+      - web_network
+    depends_on:
+      - django-api
+
+networks:
+  db_network:
+    driver: bridge
+  web_network:
+    driver: bridge

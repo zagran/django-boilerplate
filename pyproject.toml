@@ -1,0 +1,32 @@
+[tool.ruff]
+# Allow lines to be as long as 120 characters.
+line-length = 120
+
+[tool.poetry]
+name = "django-api"
+version = "0.0.1"
+description = "Django API template"
+authors = ["Sergey Zahranychnyi <zagranlab@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "~=5.0.1"
+asgiref = "^3.7.2"
+gunicorn = "^21.2.0"
+packaging = "^23.2"
+python-dotenv = "^1.0.0"
+sqlparse = "^0.4.4"
+typing-extensions = "^4.9.0"
+whitenoise = "^6.6.0"
+virtualenv = "^20.25.0"
+dumb-init = "^1.2.5.post1"
+
+# Complexity
+[tool.ruff.mccabe]
+max-complexity = 18
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
