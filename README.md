@@ -15,5 +15,18 @@ Web interface is available at http://localhost:5050/
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
+## TODO list
+- [ ] Add test view and test framework
+- [ ] Add simple CI/CD
+- [ ] Add simple Admin
+- [ ] Add documentation
+- [x] Add Swagger
+- [ ] Add Celery
+- [ ] Add Redis / RabbitMQ
+- [ ] Add PostgreSQL
+- [ ] Add Docker Compose profiles
+- [ ] Add Amazon's local stack (S3 bucket for statics)
+
 ## Contributors
 - [Serhii Zahranychnyi](https://github.com/zagran)
+
