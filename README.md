@@ -7,7 +7,8 @@ Django API template for quick start.
 3. Run "make up" to run the docker container
 
 ## Web interface
-Web interface is available at http://localhost:5050/
+Web interface is available at http://localhost:8080/
+Admin interface is available at http://localhost:8080/admin/
 
 ## Links
 - [Django](https://www.djangoproject.com/)
