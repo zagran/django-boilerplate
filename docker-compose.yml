@@ -3,8 +3,18 @@ version: '1.0'
 services:
   django-api:
     container_name: api
+    build:
+      context: .
+      args:
+        - BUILD_COMMIT_SHA=local
     restart: always
-    build: .
+    volumes:
+      - .:/app
+    command: >
+      bash -c "
+        python manage.py migrate &&
+        python manage.py runserver 0.0.0.0:80
+      "
     networks:
       - db_network
       - web_network
@@ -14,7 +24,7 @@ services:
     restart: always
     image: "nginx:latest"
     ports:
-      - "5050:5050"
+      - "8080:8080"
     volumes:
       - ./nginx:/etc/nginx/conf.d
     networks:
