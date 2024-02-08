@@ -19,9 +19,7 @@ Admin interface is available at http://localhost:8080/admin/
 ## TODO list
 - [ ] Add test view and test framework
 - [ ] Add simple CI/CD
-- [ ] Add simple Admin
 - [ ] Add documentation
-- [x] Add Swagger
 - [ ] Add Celery
 - [ ] Add Redis / RabbitMQ
 - [ ] Add PostgreSQL
