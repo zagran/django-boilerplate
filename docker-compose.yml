@@ -3,10 +3,15 @@ version: '1.0'
 services:
   django-api:
     container_name: api
+    environment:
+        - BUILD_COMMIT_SHA=local
+        - FLAVOR=local
+        - DJANGO_LOG_LEVEL=DEBUG
     build:
       context: .
       args:
         - BUILD_COMMIT_SHA=local
+        - FLAVOR=local
     restart: always
     volumes:
       - .:/app
