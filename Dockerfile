@@ -8,7 +8,7 @@ ARG APP_HOME=/app
 ARG BUILD_COMMIT_SHA
 
 # Use "fat" python image to build deps.
-FROM python:3.12 AS python-deps
+FROM python:3.12.1 AS python-deps
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -30,7 +30,7 @@ RUN if [ "$BUILD_COMMIT_SHA" = "local" ]; then \
     fi
 
 # Final worker image
-FROM python:3.12-slim AS runtime
+FROM python:3.12.2-slim AS runtime
 ARG USER
 ARG GROUP
 ARG BUILD_COMMIT_SHA
