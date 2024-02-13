@@ -17,12 +17,10 @@ Admin interface is available at http://localhost:8080/admin/
 - [Docker Compose](https://docs.docker.com/compose/)
 
 ## TODO list
-- [ ] Add test view and test framework
 - [ ] Add simple CI/CD
 - [ ] Add documentation
 - [ ] Add Celery
 - [ ] Add Redis / RabbitMQ
-- [ ] Add PostgreSQL
 - [ ] Add Docker Compose profiles
 - [ ] Add Amazon's local stack (S3 bucket for statics)
 
