@@ -8,7 +8,7 @@ up:
 	docker-compose -p $(PROJECT) up
 
 up-build:
-	docker-compose -p $(PROJECT) up
+	docker-compose -p $(PROJECT) up --build
 
 stop:
 	docker-compose -p $(PROJECT) stop
